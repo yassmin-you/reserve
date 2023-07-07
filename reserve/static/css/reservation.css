@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color:gray;
+}
+.header h2{
+    left: 590px;
+    padding:10px;
+    font-size: 1.5em;
+    color: gold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.header ul{
+    list-style: none;
+     left: 720px;
+    font-size: 1em;
+    color: #fff;
+    display: inline-flex;
+    padding-bottom: 10px;
+    gap: 30px;
+   
+}
+.header li{
+    list-style: none;
+    background-color: gold; 
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none; 
+    padding: 10px;  
+     
+}
+.header a{
+    color: #fff;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+}
+.AA{
+    position: relative;
+    width: 250px; 
+}
+.AA input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid ;
+    background-color: gray;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.AA span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 1em;
+    color:#fff;
+    text-transform: uppercase;
+}
+.AA input:valid ~ span,
+.AA input:focus ~ span{
+    color: gold;
+    transform: translateX(10px) translateY(-7px );
+    font-size: 0.95em;
+    padding: 0 10px;
+    background-color: gray;
+    border-left: 1px solid gold;
+    border-right: 1px solid gold;
+    letter-spacing: 0.1em;
+}
+.AA input:valid,
+.AA input:focus
+{
+    border: 1px solid gold;
+} 
+.EE{
+    position: relative;
+    width: 250px;
+
+}
+.EE select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid ;
+    background-color: gray;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+    
+}
+.EE h3{
+    position: absolute;
+    left: 0;
+    padding:10px;
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+}
+button{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: gold;
+    border: #fff;
+    border-radius: 5px;
+    color: #fff;
+}

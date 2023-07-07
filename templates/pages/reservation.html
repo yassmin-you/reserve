@@ -1,0 +1,75 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'css/reservation.css'%}"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>ABO ELFOTOH|RESERVATION</title>
+</head>
+<body>
+   
+  <div class="header">
+     <h2>Waled aboelfotoh</h2>
+     <center>
+    <ul>
+        <li><a href="{% url 'home'%}">الصفحة الرئيسية</a></li>
+        <li><a href="{% url 'reservation'%}">الحجز</a></li>
+    </ul></center>
+</div>
+{% if submitted %}
+   <p> !تم إرسال بياناتك بنجاح</p>
+{% else%}
+<form action="" method=POST>
+    {%csrf_token%}
+  <div class="AA">
+    <input type="text" id="name" name="name"  required="required">
+    <span>الأسم</span>
+  </div> 
+  <br><br>
+  <div class="AA">
+       <input type="number" id="whatsapp" name="whatsapp" required="required">
+       <span>رقم الطالب</span>
+  </div>
+  <br><br>
+  <div class="AA">
+      <input type="number" id="Number" name="number" required="required">
+      <span>رقم ولي الأمر</span>
+  </div> 
+  <br><br>
+  <div class="AA">
+    <input type="text" id="name" name="center">
+     <span>"لو سنتر تبع سنتر ايه "2ث</span> 
+     
+</div> 
+<br><br>
+ <div class="EE">
+     <form>
+           
+         <select name="academic" required>
+         <option>السنه الدراسية</option>   
+         <option value="الأول الأعدادي">الأول الأعدادي</option> 
+         <option value="الثاني الأعدادي">الثاني الأعدادي</option>
+         <option value="الثالث الأعدادي">الثالث الأعدادي</option>  
+         <option value="الأول الثانوي">الأول الثانوي</option>
+         <option  value="(أدبي)الثاني الثانوي">"الثاني الثانوي"أدبي</option> 
+         <option value="(ميكانيكا)الثاني الثانوي">"الثاني الثانوي"ميكانيكا</option>
+       
+      </select>
+      </form>
+      <center><button type="submit"><b>Send</b></button></center> 
+ </div>         
+
+  
+
+</form>
+{%endif%}
+
+
+</body>

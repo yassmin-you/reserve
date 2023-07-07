@@ -1,0 +1,19 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+
+<form action="{% url 'signin'%}" method="post"> 
+    {% csrf_token %}
+    {% if user.is_authenticated %}
+    <h2>!أنت مسجل بالفعل</h2>
+   {% else %}
+    <center><h1>تسجيل الدخول</h1></center>
+    <br><br>
+    <input type="text" id ="username" name="username" placeholder="USERNAME" required>
+    <br><br>
+    
+    <input type="password" id ="pass1" name="pass1" placeholder="PASSWORD" required>
+    <br>
+    <center><button type="submit" >Login</button></center>
+    <br>
+    </form>
+    {% endif %}
